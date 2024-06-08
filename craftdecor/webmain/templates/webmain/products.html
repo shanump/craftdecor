@@ -1,0 +1,73 @@
+{% extends 'webmain/base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+    <div>
+        <img src="{% static 'assets/images/collection/image2.jpg' %}" height="100%" width="100%">
+    </div><!--/.sofa-collection-->
+
+
+
+
+    <!--CATEGORY WISE ITEMS-->
+
+        <section id="new-arrivals" class="new-arrivals">
+            {% for category in cats %}
+
+            <div class="container">
+                
+
+                <div class="section-header">
+                    <h2>{{ category.cat_name }}</h2>
+                </div><!--/.section-header-->
+                <div class="new-arrivals-content">
+                    <div class="row">
+            
+                    
+                    <!-- PRODUCTS COLUMNS-->
+                    {% for pro in category.items.all %}	
+                        <div class="col-md-3 col-sm-4">
+                            <div class="single-new-arrival">
+                                <div class="single-new-arrival-bg">
+                                    <img src="{{ pro.thumbnail.url }}" alt="new-arrivals images">
+                                    <div class="single-new-arrival-bg-overlay"></div>
+                                    {% if pro.tag %}	
+                                        <div class="sale bg-2">
+                                            <p>{{ pro.tag }}</p>
+                                        </div>
+                                    {% endif %}
+                                    <div class="new-arrival-cart">
+                                        <p>
+                                            <span class="lnr lnr-star"></span>
+                                            <a href="https://api.whatsapp.com/send?text={{ product.name }}%20-%20{{ product.url }}" target="_blank">Enquire on WhatsApp</a>
+                                        </p>
+                                        <p class="arrival-review pull-right">
+                                            <span class="lnr lnr-heart"></span>
+                                            <span class="lnr lnr-frame-expand"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <h4><a href="#">{{ pro.pro_name }}</a></h4>
+
+                                
+                            
+                            </div>
+                        </div>
+                    {% endfor %}
+                        
+                        
+                    </div>
+                </div>
+            </div><!--/.container-->
+            
+            {% endfor %}
+
+            </section><!--/.new-arrivals-->
+            <!--new-arrivals end -->
+   
+
+{% endblock %}

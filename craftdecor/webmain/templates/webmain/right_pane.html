@@ -1,0 +1,16 @@
+<h2 style="color:dimgrey">Categories</h2>
+<hr>
+<ul class="nav flex-column">
+    {% for menucat in cats %}
+        {% if cat.id == menucat.id %}
+            <li class="nav-item">           
+                <a class="scroll nav-link" style="color: #e99c2e;" href="">{{ menucat.cat_name }}</a>
+            </li>
+        {% else %}
+            <li class="nav-item">           
+                <a class="nav-link" href="{% url 'products_cat' menucat.id  %}">{{ menucat.cat_name }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+    
+</ul>

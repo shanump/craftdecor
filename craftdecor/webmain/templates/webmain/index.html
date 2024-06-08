@@ -1,0 +1,165 @@
+{% extends 'webmain/base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+    <!--area after menu-->
+            
+    <!--area after menu end-->
+
+
+    <!--main slider start -->
+    <section id="sofa-collection">
+    <div class="owl-carousel owl-theme" id="collection-carousel">
+    <div class="sofa-collection collectionbg1">
+        <div class="container">
+            <div class="sofa-collection-txt">
+                <h2>Discover the Beauty of the Past</h2>
+                <p>
+                    invites you to embark on a journey through time, where every item holds a story, every piece exudes craftsmanship, and every treasure reflects the elegance and charm of bygone eras. Our collection of antiques offers a window into history, allowing you to experience the artistry and character that defined different periods							</p>
+                <div class="sofa-collection-price">
+                    <h4><span></span></h4>
+                </div>
+                <button class="btn-cart welcome-add-cart sofa-collection-btn" onclick="window.location.href='#'">
+                    view more
+                </button>
+            </div>
+        </div>	
+    </div><!--/.sofa-collection-->
+    <div class="sofa-collection collectionbg2">
+        <div class="container">
+            <div class="sofa-collection-txt">
+                <h2>Every Piece Tells a Story</h2>
+                <p>
+                    Our collection is a testament to the lives, cultures, and traditions that have shaped our world. Discover the stories etched in the patina of aged wood, the worn edges of a well-loved book, or the delicate details of vintage artwork. Let these treasures connect you to a rich tapestry of human experience, adding depth, character, and a touch of nostalgia to your life							</p>
+                <div class="sofa-collection-price">
+                    <h4><span></span></h4>
+                </div>
+                <button class="btn-cart welcome-add-cart sofa-collection-btn" onclick="window.location.href='#'">
+                    view more
+                </button>
+            </div>
+        </div>
+    </div><!--/.sofa-collection-->
+    <div class="sofa-collection collectionbg3">
+        <div class="container">
+            <div class="sofa-collection-txt">
+                <h2>Vintage Finds for Modern Times</h2>
+                <p>
+                    our vintage pieces are carefully chosen to enhance the beauty and functionality of your everyday life. Embrace the best of both worlds with treasures that tell stories of the past while enriching the aesthetics and ambience of the present. Step into our collection and find that perfect piece that speaks to both history and today’s style
+                </p>
+                <div class="sofa-collection-price">
+                    <h4> <span></span></h4>
+                </div>
+                <button class="btn-cart welcome-add-cart sofa-collection-btn" onclick="window.location.href='#'">
+                    view more
+                </button>
+            </div>
+        </div>
+    </div><!--/.sofa-collection-->
+    </div><!--/.collection-carousel-->
+
+    </section><!--/.sofa-collection-->
+    <!--slider-collection end -->
+
+
+
+    <!--blog start CATEGORIES-->
+    <section id="blog" class="blog">
+    <div class="container">
+    <div class="section-header">
+        <h2>Product Categories</h2>
+    </div><!--/.section-header-->
+    <div class="blog-content">
+        <div class="row">
+
+
+            <!-- CATEGORIES COLUMNS-->
+            {% for cat in cats %}
+            
+                <div class="col-sm-4">
+                    <div class="single-blog">
+                        <div class="single-blog-img">
+                                <img src="{{ cat.thumbnail.url }}" alt="Categories image">
+                            <div class="single-blog-img-overlay"></div>
+                        </div>
+                        <div class="single-blog-txt">
+                            <h2 class="text-center">
+                                <a class="" href="{% url 'products_cat' cat.id  %}">{{ cat.cat_name }}
+                                     
+                                    <span class="morelink">View More >></span>
+                                </a>
+                            </h2>
+                            
+                            <p></p>
+                        </div>
+                    </div>                    
+                </div>
+            
+            {% endfor %}                    
+
+        </div>
+    </div>
+    </div><!--/.container-->
+
+    </section><!--/.blog-->
+    <!--blog end -->
+
+
+
+    <!--new-arrivals start FETURED ITEMS-->
+    <section id="new-arrivals" class="new-arrivals">
+    <div class="container">
+    <div class="section-header">
+        <h2>Featured Items</h2>
+    </div><!--/.section-header-->
+    <div class="new-arrivals-content">
+        <div class="row">
+
+        
+        <!-- PRODUCTS COLUMNS-->
+        {% for pro in pros %}	
+            <div class="col-md-3 col-sm-4">
+                <div class="single-new-arrival">
+                    <div class="single-new-arrival-bg">
+                        <img src="{{ pro.thumbnail.url }}" alt="new-arrivals images">
+                        <div class="single-new-arrival-bg-overlay"></div>
+                        {% if pro.tag %}	
+                            <div class="sale bg-2">
+                                <p>{{ pro.tag }}</p>
+                            </div>
+                        {% endif %}
+                        <div class="new-arrival-cart">
+                            <p>
+                                <span class="lnr lnr-star"></span>
+                                <a href="https://api.whatsapp.com/send?text={{ product.name }}%20-%20{{ product.url }}" target="_blank">Enquire on WhatsApp</a>
+                            </p>
+                            <p class="arrival-review pull-right">
+                                <span class="lnr lnr-heart"></span>
+                                <span class="lnr lnr-frame-expand"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <h4><a href="#">{{ pro.pro_name }}</a></h4>
+                   
+                
+                </div>
+            </div>
+        {% endfor %}
+            
+            
+        </div>
+    </div>
+    </div><!--/.container-->
+
+    </section><!--/.new-arrivals-->
+    <!--new-arrivals end -->
+
+
+
+
+{% endblock %}
