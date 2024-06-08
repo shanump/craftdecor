@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w7mft#dzixef(k@=lk*c1@!$w^h!n9+&@r0u8pk41uv$d0lebw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.craftdecor.online','craftdecor.online','0.0.0.0','127.0.0.1']
 
 
 # Application definition
