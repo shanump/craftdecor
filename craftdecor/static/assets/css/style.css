@@ -111,7 +111,7 @@ html,body{height: 100%;}
         2. Top-area
 --------------------------------------*/
 nav.navbar.bootsnav {
-    background-color: transparent;
+    background-color:#eee;
     border-bottom: transparent;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
@@ -459,7 +459,7 @@ ul.cart-list > li.total {
 /*-------------------------------------
         4. Populer-post
 --------------------------------------*/
-.clear-top{padding:100px 0 0;}
+.clear-top{padding:10px 0 0;}
 
 .populer-products{padding:100px 0 0;}
 .single-populer-products{
