@@ -113,20 +113,25 @@ html,body{height: 100%;}
 nav.navbar.bootsnav {
     background-color:#eee;
     border-bottom: transparent;
+    padding: 15px 0;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
 /*.navbar-brand*/
-.navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
+.navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus{
     display: inline-block;
     color: #616060;
     font-size: 24px;
     font-weight: 500;
-    padding: 45px 0px;
+    padding: 15px 0px;
     text-transform:capitalize;
+}
+.navbar-brand img {
+    display: inline-block;
+    vertical-align: middle;
 }
 .navbar-header a.navbar-brand span{display: inline-block;color:#e99c2e;text-transform:capitalize;}
 
-.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:30px 0px;}
+.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:15px 0px;}
 /*.navbar-brand*/
 
 /*.nav li*/
@@ -141,7 +146,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-nav.navbar.bootsnav ul.nav > li > a {padding: 48px 25px;}
+nav.navbar.bootsnav ul.nav > li > a {padding: 38px 25px;}
 nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color: #e99c2e;}
 nav.navbar.bootsnav ul.nav > li.active>a {color: #e99c2e;}
 
@@ -152,7 +157,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     font-size: 8px;
     margin-left: 15px;
 }
-.wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a{padding:30px 25px;}
+.wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a{padding:15px 25px;}
 /*.nav li*/
 
 /*.menu-ui-design*/
